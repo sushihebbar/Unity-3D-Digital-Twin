@@ -9,6 +9,7 @@ TagManager:
   - fan
   - marker
   - Grabbable
+  - crosshair
   layers:
   - Default
   - TransparentFX

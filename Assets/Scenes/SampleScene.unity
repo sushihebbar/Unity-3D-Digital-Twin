@@ -752,11 +752,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bac2b85e0f30ed648a43759241571a7c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.377
+      value: 0.458
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bac2b85e0f30ed648a43759241571a7c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.667
+      value: 0.976
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bac2b85e0f30ed648a43759241571a7c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -796,7 +796,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bac2b85e0f30ed648a43759241571a7c, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1239573377}
+      addedObject: {fileID: 1239573381}
   m_SourcePrefab: {fileID: 100100000, guid: bac2b85e0f30ed648a43759241571a7c, type: 3}
 --- !u!1 &90357717
 GameObject:
@@ -2147,7 +2147,7 @@ BoxCollider:
   m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2, y: 2, z: 2}
+  m_Size: {x: 2, y: 2, z: 7}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &405340974
 MeshRenderer:
@@ -6429,7 +6429,7 @@ GameObject:
   - component: {fileID: 1035813592}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: crosshair
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7391,33 +7391,27 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bac2b85e0f30ed648a43759241571a7c, type: 3}
   m_PrefabInstance: {fileID: 80219423}
   m_PrefabAsset: {fileID: 0}
---- !u!54 &1239573377
-Rigidbody:
+--- !u!65 &1239573381
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1239573373}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 14
-  m_CollisionDetection: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.3580112, y: 4.6048007, z: 2.7160468}
+  m_Center: {x: -0.000540495, y: 0.84218854, z: 0.14368652}
 --- !u!1 &1256578042
 GameObject:
   m_ObjectHideFlags: 0
@@ -8577,8 +8571,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccc998d0bba646e4f84883627c5f25f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  texture: {fileID: 0}
-  textureSize: {x: 2048, y: 2048}
 --- !u!1 &1562703261 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9197150917554194717, guid: 10167dad683b6485d936cbac0d9b7ae8, type: 3}
@@ -11391,6 +11383,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4673640145033205582, guid: 85daf71f0bf1dad428e19b3800c9ffcb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6224022326578250902}
+    - targetCorrespondingSourceObject: {fileID: 4673640145033205582, guid: 85daf71f0bf1dad428e19b3800c9ffcb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6224022326578250903}
   m_SourcePrefab: {fileID: 100100000, guid: 85daf71f0bf1dad428e19b3800c9ffcb, type: 3}
 --- !u!114 &6224022326578250902
 MonoBehaviour:
@@ -11412,6 +11407,19 @@ MonoBehaviour:
   SpawnWithObservers: 1
   DontDestroyWithOwner: 0
   AutoObjectParentSync: 1
+--- !u!114 &6224022326578250903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781274613696399857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8a52478708890048891432c096b608c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crosshair: {fileID: 1035813587}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
